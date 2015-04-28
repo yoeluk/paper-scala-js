@@ -2,7 +2,7 @@ sonatypeSettings
 name         := "paper-scala-js"
 version      := "0.1-SNAPSHOT"
 scalaVersion := "2.11.6"
-organization := "com.zaporbit"
+organization := "com.github.yoeluk"
 isSnapshot   := true
 
 enablePlugins(ScalaJSPlugin)
@@ -23,7 +23,6 @@ jsDependencies += "org.webjars" % "paperjs" % "0.9.22" / "paper-full.min.js" com
 publishMavenStyle       := true
 publishArtifact in Test := false
 pomIncludeRepository    := { _ => false }
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 
 publishTo := {
   val nexus = "https://oss.sonatype.org/"
@@ -42,8 +41,8 @@ pomExtra := {
       </license>
     </licenses>
     <scm>
-      <connection>scm:git:github.com/yoeluk/paper-scala-js</connection>
-      <developerConnection>scm:git:git@github.com:yoeluk/paper-scala-js</developerConnection>
+      <connection>https://github.com/yoeluk/paper-scala-js.git</connection>
+      <developerConnection>scm:git:git@github.com:yoeluk/paper-scala-js.git</developerConnection>
       <url>github.com/yoeluk/paper-scala-js</url>
     </scm>
     <developers>
