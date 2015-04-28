@@ -9,9 +9,9 @@ Repository
 ===
 Paper-scala-js is published as a SNAPSHOT with Sonatype snapshots repository so add the following lines to your build.sbt
 
-`resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"`
-
 ```
+resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
+
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.8.0",
   "com.github.yoeluk" %%% "paper-scala-js" % "0.1-SNAPSHOT"
@@ -20,7 +20,9 @@ libraryDependencies ++= Seq(
 
 Aditionally you need the Scala.js plugin. Add the following line to your plugins.sbt file under the Project/ directory
 
-`addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.2")`
+```
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.2")
+```
 
 Skecher App
 ===
