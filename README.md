@@ -16,6 +16,8 @@ libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.8.0",
   "com.github.yoeluk" %%% "paper-scala-js" % "0.1-SNAPSHOT"
 )
+
+jsDependencies += "org.webjars" % "paperjs" % "0.9.22" / "paper-full.min.js" commonJSName "paper"
 ```
 
 Aditionally, you need the Scala.js plugin. Add the following line to the plugins.sbt file under the Project/ directory.
