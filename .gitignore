@@ -1,0 +1,5 @@
+# paper-scala-js
+/.idea/
+/target/
+/project/project
+/project/target
