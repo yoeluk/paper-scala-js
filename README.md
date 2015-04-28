@@ -1,13 +1,13 @@
-# Paper-scala-js
-## A Scala.js port for Paper.js
+# Paper-Scala-js
+## A Scala.js binding for Paper.js
 
 [Paper.js](http://paperjs.org/) is best described in their own words. So this description is a extract of their website. Paper.js — The Swiss Army Knife of Vector Graphics Scripting. It is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas. It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.
 
-To find out more about [Paper.js](http://paperjs.org/)  please visit their webite. Paper-scala-js aim to make available all of Paper.js functionality from within a Scala.js application, and therefore in Scala, to its users. Undoubtedly we will fall short at times, primarily because in the JavaScript everything is possible, and if you spot where we haven’t yet deliver on our promises let us and open an issue.
+To find out more about [Paper.js](http://paperjs.org/)  please visit their webite. Paper-Scala-js aim to make available all of Paper.js functionality from within a Scala.js application, and therefore in Scala, to its users. Undoubtedly we will fall short at times, primarily because in the JavaScript everything is possible, and if you spot where we haven’t yet deliver on our promises let us know and open an issue.
 
-Repository
-===
-Paper-scala-js is published as a SNAPSHOT with Sonatype snapshots repository so add the following lines to your build.sbt
+## Installing Paper-Scala-js
+
+Paper-scala-js is published as a SNAPSHOT with Sonatype snapshots repository so add the following lines to build.sbt to add it to your project.
 
 ```
 resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
@@ -18,16 +18,18 @@ libraryDependencies ++= Seq(
 )
 ```
 
-Aditionally you need the Scala.js plugin. Add the following line to your plugins.sbt file under the Project/ directory
+Aditionally, you need the Scala.js plugin. Add the following line to the plugins.sbt file under the Project/ directory.
 
 ```
 addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.2")
 ```
 
+Please note that Paper.js requieres setup and you can do that from withing Paper-Scala-js. See an example of an entry method below.
+
 Skecher App
 ===
 
-The example entry method below ilustrates what it feels like drawing and adding mouse events with Paper-scala-js
+The example entry method below ilustrates what it feels like drawing and adding mouse events with Paper-Scala-js.
 
 ```scala
 package sketcher
@@ -66,6 +68,8 @@ object Sketcher {
 }
 ```
 
+This example is part of a provisional demo project that you can find [here](https://github.com/yoeluk/sketch-app).
+
 License
 ===
-The code is available under [Apache 2](http://www.apache.org/licenses/LICENSE-2.0.txt) license. Feel free to contribute or to fork it.
+The code is available under [Apache 2](http://www.apache.org/licenses/LICENSE-2.0.txt) license. Feel free to contribute to it or to fork it.
