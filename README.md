@@ -1,7 +1,7 @@
 # Paper-Scala-js
 ## A Scala.js binding for Paper.js
 
-[Paper.js](http://paperjs.org/) is best described in their own words. So this description is an extract of their website. Paper.js — The Swiss Army Knife of Vector Graphics Scripting. It is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas. It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.
+[Paper.js](http://paperjs.org/) is best described in their own words. So this description is an extract from their website. Paper.js — The Swiss Army Knife of Vector Graphics Scripting. It is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas. It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.
 
 To find out more about [Paper.js](http://paperjs.org/)  please visit their webite. Paper-Scala-js aim to make available all of Paper.js functionality from within a Scala.js application, and therefore in Scala, to its users. Undoubtedly we will fall short at times, primarily because in the JavaScript everything is possible, and if you spot where we haven’t yet deliver on our promises let us know and open an issue.
 
