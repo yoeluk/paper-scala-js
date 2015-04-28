@@ -26,8 +26,7 @@ addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.2")
 
 Please note that Paper.js requieres setup and you can do that from withing Paper-Scala-js. See an example of an entry method below.
 
-Skecher App
-===
+## Sketcher App
 
 The example entry method below ilustrates what it feels like drawing and adding mouse events with Paper-Scala-js.
 
