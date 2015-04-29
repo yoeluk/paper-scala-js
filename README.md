@@ -7,20 +7,27 @@ To find out more about [Paper.js](http://paperjs.org/)  please visit their webit
 
 ## Installing Paper-Scala-js
 
-Paper-scala-js is published as a SNAPSHOT with Sonatype snapshots repository so add the following lines to build.sbt to add it to your project.
+Paper-scala-js is published as a SNAPSHOT with Sonatype snapshots repository so add the following lines to build.sbt to add it to your project. Note that you don't need to add the Scala.js dom dependency, Paper-Scala-js will do that for you.
 
 ```
+enablePlugins(ScalaJSPlugin)
+
 resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 
 libraryDependencies ++= Seq(
-  "org.scala-js" %%% "scalajs-dom" % "0.8.0",
-  "com.github.yoeluk" %%% "paper-scala-js" % "0.1-SNAPSHOT"
+  "com.github.yoeluk" %%% "paper-scala-js" % "0.1.2-SNAPSHOT"
 )
 
 jsDependencies += "org.webjars" % "paperjs" % "0.9.22" / "paper-full.min.js" commonJSName "paper"
+
+persistLauncher in Compile := false
+
+persistLauncher in Test := false
+
+skip in packageJSDependencies := false
 ```
 
-Aditionally, you need the Scala.js plugin. Add the following line to the plugins.sbt file under the Project/ directory.
+Add the following line to the plugins.sbt file under the Project/ directory to get the Scala.js plugin.
 
 ```
 addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.2")

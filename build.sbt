@@ -3,7 +3,6 @@ name         := "paper-scala-js"
 version      := "0.1-SNAPSHOT"
 scalaVersion := "2.11.6"
 organization := "com.github.yoeluk"
-isSnapshot   := true
 
 enablePlugins(ScalaJSPlugin)
 
@@ -24,9 +23,9 @@ publishMavenStyle       := true
 publishArtifact in Test := false
 pomIncludeRepository    := { _ => false }
 
-publishTo := {
+publishTo <<= version { v: String =>
   val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
+  if (v.trim.endsWith("SNAPSHOT"))
     Some("snapshots" at nexus + "content/repositories/snapshots")
   else
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
