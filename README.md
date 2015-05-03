@@ -15,7 +15,7 @@ enablePlugins(ScalaJSPlugin)
 resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 
 libraryDependencies ++= Seq(
-  "com.github.yoeluk" %%% "paper-scala-js" % "0.1.2-SNAPSHOT"
+  "com.github.yoeluk" %%% "paper-scala-js" % "0.1.3-SNAPSHOT"
 )
 
 jsDependencies += "org.webjars" % "paperjs" % "0.9.22" / "paper-full.min.js" commonJSName "paper"
