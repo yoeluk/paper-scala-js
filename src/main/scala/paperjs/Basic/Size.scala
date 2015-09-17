@@ -32,8 +32,8 @@ class Size(width: Double, height: Double) extends SizeProps {
   def equals(s: Size): Boolean = js.native
   @JSName("equals")
   def ==(s: Size): Boolean = js.native
-  def isZero(): Boolean = js.native
-  def isNaN(): Boolean = js.native
+  def isZero: Boolean = js.native
+  def isNaN: Boolean = js.native
   def round(): Size = js.native
   def ceil(): Size = js.native
   def floor(): Size = js.native
