@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 27/04/15.
  */
 
+@js.native
 @JSName("paper.Tool")
 class Tool extends EventHandling[Tool] {
   var minDistance: Double = js.native

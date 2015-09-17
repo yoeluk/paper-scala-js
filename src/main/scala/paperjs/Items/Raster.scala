@@ -11,6 +11,7 @@ import org.scalajs.dom._
  * Created by yoelusa on 26/04/15.
  */
 
+@js.native
 @JSName("paper.Raster")
 class Raster(source: String, position: Point = Point(0,0)) extends Item {
   def this(source: raw.HTMLImageElement, position: Point) = this("", position)

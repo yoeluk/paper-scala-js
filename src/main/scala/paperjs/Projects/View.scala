@@ -12,6 +12,7 @@ import org.scalajs.dom._
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 @JSName("paper.View")
 trait View extends EventHandling[View] {
   val element: raw.HTMLCanvasElement = js.native

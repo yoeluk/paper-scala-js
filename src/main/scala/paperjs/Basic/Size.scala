@@ -8,11 +8,13 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 24/04/15.
  */
 
+@js.native
 trait SizeProps extends js.Object {
   var width: Double = js.native
   var height: Double = js.native
 }
 
+@js.native
 @JSName("paper.Size")
 class Size(width: Double, height: Double) extends SizeProps {
   def this(width: Double) = this(0,0)
@@ -40,6 +42,7 @@ class Size(width: Double, height: Double) extends SizeProps {
   def abs(): Size = js.native
 }
 
+@js.native
 @JSName("paper.Point")
 object Size extends js.Object {
   def min(size1: Size, size2: Size): Size = js.native

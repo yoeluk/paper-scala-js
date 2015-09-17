@@ -9,6 +9,7 @@ import scala.scalajs.js
  * Created by yoelusa on 27/04/15.
  */
 
+@js.native
 class CompoundPath(pathData: String) extends Item with PathItem{
   def this(obj: js.Dynamic) = this("")
 

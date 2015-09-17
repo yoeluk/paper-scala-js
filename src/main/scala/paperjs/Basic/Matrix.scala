@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 trait MatrixProps extends js.Object {
   var a: Double = js.native
   var b: Double = js.native
@@ -21,6 +22,7 @@ trait MatrixProps extends js.Object {
   def rotation: Double = js.native
 }
 
+@js.native
 @JSName("paper.Matrix")
 class Matrix(a: Double, b: Double, c: Double, d: Double,
              tx: Double, ty: Double) extends MatrixProps {

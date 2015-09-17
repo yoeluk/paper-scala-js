@@ -11,6 +11,7 @@ import Styling._,Items._,Basic._
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 @JSName("paper.Project")
 class Project(element: String) extends js.Object {
   def this(elem: HTMLCanvasElement) = this("")

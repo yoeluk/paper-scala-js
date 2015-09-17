@@ -9,6 +9,7 @@ import Basic._
  * Created by yoelusa on 26/04/15.
  */
 
+@js.native
 @JSName("paper.Shape")
 trait Shape extends Item {
   @JSName("type")
@@ -17,6 +18,7 @@ trait Shape extends Item {
   def radius: Double = js.native
 }
 
+@js.native
 @JSName("paper.Shape")
 object Shape extends js.Object {
   def Circle(center: Point, radius: Double): Shape = js.native

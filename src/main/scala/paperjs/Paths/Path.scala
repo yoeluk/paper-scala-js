@@ -10,6 +10,7 @@ import Basic._,Items._
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 @JSName("paper.Path")
 class Path(segments: js.Array[Segment] = js.Array[Segment]()) extends Item with PathItem {
   def this(obj: js.Dynamic) = this()
@@ -58,6 +59,7 @@ class Path(segments: js.Array[Segment] = js.Array[Segment]()) extends Item with 
   def getNearestPoint(point: Point): Point = js.native
 }
 
+@js.native
 @JSName("paper.Path")
 object Path extends js.Object {
   def Line(from: Point, to: Point): Path = js.native

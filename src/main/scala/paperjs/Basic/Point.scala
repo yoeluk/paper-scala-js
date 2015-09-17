@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 23/04/15.
  */
 
+@js.native
 trait PointProps extends js.Object {
   var angleInRadians: Double = js.native
   def quadrant: Double = js.native
@@ -16,6 +17,7 @@ trait PointProps extends js.Object {
   var y: Double = js.native
 }
 
+@js.native
 trait Vect extends PointProps {
   var angle: Double = js.native
   var length: Double = js.native
@@ -29,6 +31,7 @@ object Vect {
     ).asInstanceOf[Vect]
 }
 
+@js.native
 @JSName("paper.Point")
 class Point(x: Double, y: Double) extends PointProps with Vect {
   def this(x: Double) = this(0,0)
@@ -68,6 +71,7 @@ class Point(x: Double, y: Double) extends PointProps with Vect {
   def abs(): Point = js.native
 }
 
+@js.native
 @JSName("paper.Point")
 object Point extends js.Object {
   def min(point1: Point, point2: Point): Point = js.native

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.JSName
 
 package object paperjs {
   import Items._,Basic._,Paths._,Styling.Color,Projects._,Tools._
+  @js.native
   trait HitResult extends js.Object {
     @JSName("type")
     val hitType: String = js.native
@@ -20,6 +21,7 @@ package object paperjs {
     val segment: Segment = js.native
     val point: Point = js.native
   }
+  @js.native
   @JSName("paper.CurveLocation")
   class CurveLocation(curve: Curve, parameter: Double, point: Point)
     extends js.Object {
@@ -33,6 +35,7 @@ package object paperjs {
     def equals(location: CurveLocation): Boolean = js.native
     override def toString: String = js.native
   }
+  @js.native
   trait FontStyle extends js.Object {
 
     // Character Style
@@ -50,6 +53,7 @@ package object paperjs {
 
     var justification: String = js.native
   }
+  @js.native
   trait EventHandling[T] extends js.Object {
     def on(event: String, function: js.ThisFunction1[View, dom.Event, Unit]): T = js.native
     @JSName("on")
@@ -60,6 +64,7 @@ package object paperjs {
     def emit(event: String, eventProps: js.Dynamic): Boolean = js.native
     def responds(event: String): Boolean = js.native
   }
+  @js.native
   trait MouseHandler extends js.Object {
     var onMouseDown: js.ThisFunction1[Item, ToolEvent, Unit] = js.native
     var onMouseUp: js.ThisFunction1[Item, ToolEvent, Unit] = js.native
@@ -68,6 +73,7 @@ package object paperjs {
   implicit class PaperCompanionOps(val self: PaperScope.type) extends AnyVal {
     def apply(): PaperScope = new PaperScope()
   }
+  @js.native
   @JSName("PaperScope")
   class PaperScope extends js.Object {
     def setup(canvas: html.Canvas): Unit = js.native
@@ -80,11 +86,12 @@ package object paperjs {
     def tool: Tool = js.native
     def tools: js.Array[Tool] = js.native
   }
-
+  @js.native
+  @JSName("PaperScope")
   object PaperScope extends js.Object {
     def get(id: Int): PaperScope = js.native
   }
-
+  @js.native
   @JSName("paper")
   object Paper extends PaperScope
 }

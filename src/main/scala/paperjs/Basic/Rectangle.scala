@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 24/04/15.
  */
 
+@js.native
 trait RectProps extends js.Object {
   var x: Double = js.native
   var y: Double = js.native
@@ -42,6 +43,7 @@ object RectDims {
     ).asInstanceOf[RectProps]
 }
 
+@js.native
 @JSName("paper.Rectangle")
 class Rect(x: Double, y: Double, width: Double, height: Double) extends RectProps {
   def this(p: Point, s: Size) = this(0,0,0,0)

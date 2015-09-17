@@ -10,12 +10,14 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 @JSName("paper.GradientStops")
 class GradientStops(color: String, rampPoint: Double) extends js.Object {
   def this(color: Color, rampPoint: Double) = this("",0)
   override def clone(): GradientStops = js.native
 }
 
+@js.native
 trait Gradient extends js.Object {
   var stops: js.Array[Double] = js.native
   var radial: Boolean = js.native
@@ -23,6 +25,7 @@ trait Gradient extends js.Object {
   def equals(): Boolean = js.native
 }
 
+@js.native
 @JSName("paper.Color")
 class Color(red: Double, green: Double, blue: Double, alpha: Double) extends js.Object {
   def this(gray: Double, alpha: Double) = this(0,0,0,0)

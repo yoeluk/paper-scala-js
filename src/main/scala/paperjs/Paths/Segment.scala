@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 @JSName("paper.Segment")
 class Segment(point: Point, handleIn: Point = Point(0,0),
               handleOut: Point = Point(0,0)) extends js.Object {

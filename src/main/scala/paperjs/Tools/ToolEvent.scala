@@ -8,6 +8,7 @@ import Basic._,Items._
  * Created by yoelusa on 27/04/15.
  */
 
+@js.native
 trait ToolEvent extends js.Object {
   val `type`: String = js.native
   val point: Point = js.native

@@ -10,6 +10,7 @@ import Basic._
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 @JSName("paper.Curve")
 class Curve(segment1: Segment, segment2: Segment) extends js.Object {
   def this(point1: Point, handle1: Point, handle2: Point, point2: Point) =

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 @JSName("paper.Symbol")
 class Symbol(item: Item, dontCenter: Boolean = false) extends js.Object {
   val project: Project = js.native

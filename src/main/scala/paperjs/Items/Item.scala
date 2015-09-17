@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.JSName
  * Created by yoelusa on 25/04/15.
  */
 
+@js.native
 trait Item extends EventHandling[Item] with MouseHandler {
 
   // Properties
