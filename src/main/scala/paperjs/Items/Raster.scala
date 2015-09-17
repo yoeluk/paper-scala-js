@@ -30,7 +30,7 @@ class Raster(source: String, position: Point = Point(0,0)) extends Item {
 
   def getSubCanvas(rect: Rect): html.Canvas = js.native
   def getSubRaster(rect: Rect): Raster = js.native
-  def toDataURL(): String = js.native
+  def toDataURL: String = js.native
   def drawImage(image: raw.HTMLImageElement, point: Point): Unit = js.native
   @JSName("drawImage")
   def drawCanvas(canvas: html.Canvas, point: Point): Unit = js.native

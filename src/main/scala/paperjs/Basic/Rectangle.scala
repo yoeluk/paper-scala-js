@@ -50,8 +50,8 @@ class Rect(x: Double, y: Double, width: Double, height: Double) extends RectProp
   def equals(rect: Rect): Boolean = js.native
   @JSName("equals")
   def ==(r: Rect): Boolean = js.native
-  override def toString(): String = js.native
-  def isEmpty(): Boolean = js.native
+  override def toString: String = js.native
+  def isEmpty: Boolean = js.native
   def contains(point: Point): Boolean = js.native
   def contains(rect: Rect): Boolean = js.native
   def intersects(rect: Rect): Boolean = js.native

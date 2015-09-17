@@ -29,7 +29,7 @@ class Matrix(a: Double, b: Double, c: Double, d: Double,
   def equals(matrix: Matrix): Boolean = js.native
   @JSName("equals")
   def ==(matrix: Matrix): Boolean = js.native
-  override def toString(): String = js.native
+  override def toString: String = js.native
   def reset(): Unit = js.native
   def apply(recursively: Boolean): Boolean = js.native
   def translate(point: Point): Matrix = js.native
@@ -46,9 +46,9 @@ class Matrix(a: Double, b: Double, c: Double, d: Double,
   def concatenate(mx: Matrix): Matrix = js.native
   def preConcatenate(mx: Matrix): Matrix = js.native
   def chain(mx: Matrix): Matrix = js.native
-  def isIdentity(): Boolean = js.native
-  def isInvertible(): Boolean = js.native
-  def isSingular(): Boolean = js.native
+  def isIdentity: Boolean = js.native
+  def isInvertible: Boolean = js.native
+  def isSingular: Boolean = js.native
   def transform(point: Point): Point = js.native
   def transform(src: Double, dst: Double, count: Double): Double = js.native
   def inverseTransform(point: Point): Point = js.native

@@ -47,11 +47,11 @@ class Color(red: Double, green: Double, blue: Double, alpha: Double) extends js.
   def gradient: Gradient = js.native
   def highlight: Point = js.native
   def convert(`type`: String): Color = js.native
-  def hasAlpha(): Boolean = js.native
+  def hasAlpha: Boolean = js.native
   def equals(color: Color): Boolean = js.native
   def equals(color: String): Boolean = js.native
   override def clone(): Color = js.native
-  override def toString(): String = js.native
+  override def toString: String = js.native
   def toCSS(hex: Boolean): String = js.native
   def transform(matrix: Matrix): Unit = js.native
 }

@@ -57,8 +57,8 @@ class Point(x: Double, y: Double) extends PointProps with Vect {
   def isClose(point: Point, tolerance: Double): Boolean = js.native
   def isColinear(point: Point): Boolean = js.native
   def isOrthogonal(point: Point): Boolean = js.native
-  def isZero(): Boolean = js.native
-  def isNaN(): Boolean = js.native
+  def isZero: Boolean = js.native
+  def isNaN: Boolean = js.native
   def dot(point: Point): Double = js.native
   def cross(point: Point): Double = js.native
   def project(point: Point): Point = js.native

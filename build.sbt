@@ -1,7 +1,7 @@
 sonatypeSettings
 name         := "paper-scala-js"
 version      := "0.1-SNAPSHOT"
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.7"
 organization := "com.github.yoeluk"
 
 enablePlugins(ScalaJSPlugin)
@@ -9,13 +9,12 @@ enablePlugins(ScalaJSPlugin)
 scalacOptions ++= Seq(
   "-feature",
   "-deprecation",
-  "-target:jvm-1.7",
   "-encoding", "UTF-8",
   "-language:implicitConversions",
   "-language:reflectiveCalls"
 )
 libraryDependencies ++= Seq(
-  "org.scala-js" %%% "scalajs-dom" % "0.8.0"
+  "org.scala-js" %%% "scalajs-dom" % "0.8.1"
 )
 jsDependencies += "org.webjars" % "paperjs" % "0.9.22" / "paper-full.min.js" commonJSName "paper"
 

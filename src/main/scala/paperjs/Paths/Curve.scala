@@ -29,13 +29,13 @@ class Curve(segment1: Segment, segment2: Segment) extends js.Object {
 
   // Methods
 
-  def isLinear(): Boolean = js.native
+  def isLinear: Boolean = js.native
   def divide(offset: Double = 0.5, isParameter: Boolean): Curve = js.native
   def split(offset: Double, isParameter: Boolean = false): Path = js.native
   def reverse(): Curve = js.native
   def remove(): Boolean = js.native
   override def clone(): Curve = js.native
-  override def toString(): String = js.native
+  override def toString: String = js.native
   def getParameterAt(offset: Double, start: Double = 1.0): Double = js.native
   def getParameterOf(point: Point): Double = js.native
   def getLocationAt(offset: Double, isParameter: Boolean = false): CurveLocation = js.native

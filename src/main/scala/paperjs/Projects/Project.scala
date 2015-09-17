@@ -23,7 +23,7 @@ class Project(element: String) extends js.Object {
   def selectedItems: js.Array[Item] = js.native
   def activate(): Unit = js.native
   def clear(): Unit = js.native
-  def isEmpty(): Boolean = js.native
+  def isEmpty: Boolean = js.native
   def remove(): Unit = js.native
   def selectAll(): Unit = js.native
   def deselectAll(): Unit = js.native

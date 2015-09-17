@@ -35,10 +35,10 @@ class Segment(point: Point, handleIn: Point = Point(0,0),
   // Methods
 
   def isColinear(segment: Segment): Boolean = js.native
-  def isArc(): Boolean = js.native
+  def isArc: Boolean = js.native
   def reverse(): Segment = js.native
   def remove(): Boolean = js.native
-  override def toString(): String = js.native
+  override def toString: String = js.native
   def transform(matrix: Matrix): Unit = js.native
 }
 

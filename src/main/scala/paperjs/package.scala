@@ -31,7 +31,7 @@ package object paperjs {
     val curveOffset: Double = js.native
     val distance: Double = js.native
     def equals(location: CurveLocation): Boolean = js.native
-    override def toString(): String = js.native
+    override def toString: String = js.native
   }
   trait FontStyle extends js.Object {
 

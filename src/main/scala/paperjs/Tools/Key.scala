@@ -17,6 +17,6 @@ trait KeyEvent extends js.Object {
   val `type`: String = js.native
   val character: String = js.native
   val key: String = js.native
-  override def toString(): String = js.native
+  override def toString: String = js.native
   def modifiers: js.Dynamic = js.native
 }
