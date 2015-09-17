@@ -1,6 +1,6 @@
 sonatypeSettings
 name         := "paper-scala-js"
-version      := "0.1-SNAPSHOT"
+version      := "0.4-SNAPSHOT"
 scalaVersion := "2.11.7"
 organization := "com.github.yoeluk"
 
