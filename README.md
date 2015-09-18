@@ -42,7 +42,7 @@ The example entry method below ilustrates what it feels like drawing and adding 
 package sketcher
 
 import org.scalajs.dom.html
-import paperjs.Projects.FrameEvent
+import paperjs.Projects.{View, FrameEvent}
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSExport
 import paperjs._
@@ -109,7 +109,8 @@ object Sketcher {
       }
     }
 
-    Paper.view.onFrame = (event: FrameEvent) => {
+    Paper.view.onFrame = (view: View, event: FrameEvent) => {
+      println(event)
       eventCount() = event.count
     }
 
@@ -122,7 +123,7 @@ object Sketcher {
       smooth() = !sm
     }
 
-    Paper.view.onResize = (event: FrameEvent) => {
+    Paper.view.onResize = (view: View, event: FrameEvent) => {
       initializePath()
     }
   }
