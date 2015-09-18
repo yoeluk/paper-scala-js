@@ -29,7 +29,7 @@ skip in packageJSDependencies := false
 Add the following line to the plugins.sbt file under the Project/ directory to get the Scala.js plugin.
 
 ```
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.2")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.5")
 ```
 
 Please note that Paper.js requieres setup and you can do that from withing Paper-Scala-js. See an example of an entry method below.
