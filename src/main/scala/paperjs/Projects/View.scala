@@ -26,8 +26,8 @@ trait View extends EventHandling[View] {
 
   // Event Handlers
 
-  var onFrame: js.ThisFunction0[FrameEvent, Unit] = js.native
-  var onResize: js.ThisFunction0[FrameEvent, Unit] = js.native
+  var onFrame: js.ThisFunction1[View, FrameEvent, Unit] = js.native
+  var onResize: js.ThisFunction1[View, FrameEvent, Unit] = js.native
 
   // Methods
 
