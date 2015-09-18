@@ -77,4 +77,5 @@ object Point extends js.Object {
   def min(point1: Point, point2: Point): Point = js.native
   def max(point1: Point, point2: Point): Point = js.native
   def random(): Point = js.native
+  def nullPoint: Point = js.native
 }

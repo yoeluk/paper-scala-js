@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation.JSName
 
 @js.native
 @JSName("paper.Segment")
-class Segment(point: Point, handleIn: Point = Point(0,0),
-              handleOut: Point = Point(0,0)) extends js.Object {
+class Segment(var point: Point, var handleIn: Point = Point(0,0),
+              var handleOut: Point = Point(0,0)) extends js.Object {
   def this(obj: js.Dynamic) = this(Point(0,0))
 
   // Properties

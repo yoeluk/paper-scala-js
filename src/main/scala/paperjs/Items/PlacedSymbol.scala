@@ -11,4 +11,4 @@ import Basic._
 
 @js.native
 @JSName("paper.PlacedSymbol")
-class PlacedSymbol(symbol: Symbol, point: Point = Point(0,0)) extends Item
+class PlacedSymbol(symbol: Symbol, var point: Point = Point(0,0)) extends Item

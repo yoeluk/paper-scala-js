@@ -1,6 +1,6 @@
 sonatypeSettings
 name         := "paper-scala-js"
-version      := "0.4-SNAPSHOT"
+version      := "0.5-SNAPSHOT"
 scalaVersion := "2.11.7"
 organization := "com.github.yoeluk"
 
@@ -13,9 +13,7 @@ scalacOptions ++= Seq(
   "-language:implicitConversions",
   "-language:reflectiveCalls"
 )
-libraryDependencies ++= Seq(
-  "org.scala-js" %%% "scalajs-dom" % "0.8.1"
-)
+libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.8.1"
 jsDependencies += "org.webjars" % "paperjs" % "0.9.22" / "paper-full.min.js" commonJSName "paper"
 
 publishMavenStyle       := true
@@ -32,22 +30,22 @@ publishTo <<= version { v: String =>
 
 pomExtra := {
   <url>https://github.com/yoeluk/paper-scala-js</url>
-    <licenses>
-      <license>
-        <name>Apache 2</name>
-        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      </license>
-    </licenses>
-    <scm>
-      <connection>https://github.com/yoeluk/paper-scala-js.git</connection>
-      <developerConnection>scm:git:git@github.com:yoeluk/paper-scala-js.git</developerConnection>
-      <url>github.com/yoeluk/paper-scala-js</url>
-    </scm>
-    <developers>
-      <developer>
-        <id>yoeluk</id>
-        <name>Yoel RGD</name>
-        <url>https://github.com/yoeluk/</url>
-      </developer>
-    </developers>
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>https://github.com/yoeluk/paper-scala-js.git</connection>
+    <developerConnection>scm:git:git@github.com:yoeluk/paper-scala-js.git</developerConnection>
+    <url>github.com/yoeluk/paper-scala-js</url>
+  </scm>
+  <developers>
+    <developer>
+      <id>yoeluk</id>
+      <name>Yoel RGD</name>
+      <url>https://github.com/yoeluk/</url>
+    </developer>
+  </developers>
 }

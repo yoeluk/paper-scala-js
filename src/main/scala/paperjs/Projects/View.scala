@@ -26,13 +26,13 @@ trait View extends EventHandling[View] {
 
   // Event Handlers
 
-  var onFrame: js.ThisFunction1[View, dom.Event, Unit] = js.native
-  var onResize: js.ThisFunction1[View, dom.Event, Unit] = js.native
+  var onFrame: js.ThisFunction0[FrameEvent, Unit] = js.native
+  var onResize: js.ThisFunction0[FrameEvent, Unit] = js.native
 
   // Methods
 
   def remove(): Unit = js.native
-  def isVisible(): Boolean = js.native
+  def isVisible: Boolean = js.native
   def scrollBy(point: Point): Unit = js.native
   def play(): Unit = js.native
   def update(): Unit =js.native

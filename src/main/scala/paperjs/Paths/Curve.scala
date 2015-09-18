@@ -12,7 +12,7 @@ import Basic._
 
 @js.native
 @JSName("paper.Curve")
-class Curve(segment1: Segment, segment2: Segment) extends js.Object {
+class Curve(var segment1: Segment, var segment2: Segment) extends js.Object {
   def this(point1: Point, handle1: Point, handle2: Point, point2: Point) =
     this(Segment(Point(0,0)),Segment(Point(0,0)))
 

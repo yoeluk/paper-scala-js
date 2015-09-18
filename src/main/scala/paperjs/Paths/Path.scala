@@ -12,7 +12,7 @@ import Basic._,Items._
 
 @js.native
 @JSName("paper.Path")
-class Path(segments: js.Array[Segment] = js.Array[Segment]()) extends Item with PathItem {
+class Path(var segments: js.Array[Segment] = js.Array[Segment]()) extends Item with PathItem {
   def this(obj: js.Dynamic) = this()
   def this(pathData: String) = this()
 
@@ -33,6 +33,7 @@ class Path(segments: js.Array[Segment] = js.Array[Segment]()) extends Item with 
   // Methods
 
   def add(segment: Segment): Segment = js.native
+  def add(point: Point): Point = js.native
   def insert(index: Int, segment: Segment): Segment = js.native
   def addSegments(segments: js.Array[Segment]): js.Array[Segment] = js.native
   def insertSegments(index: Int, segments: js.Array[Segment]): js.Array[Segment] = js.native
@@ -77,5 +78,4 @@ object Path extends js.Object {
   def RegularPolygon(obj: js.Dynamic): Path = js.native
   def Star(center: Point, points: Int, radius1: Double, radius2: Double): Path = js.native
   def Star(obj: js.Dynamic): Path = js.native
-
 }

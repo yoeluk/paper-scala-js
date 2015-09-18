@@ -13,7 +13,7 @@ import org.scalajs.dom._
 
 @js.native
 @JSName("paper.Raster")
-class Raster(source: String, position: Point = Point(0,0)) extends Item {
+class Raster(var source: String, position: Point = Point(0,0)) extends Item {
   def this(source: raw.HTMLImageElement, position: Point) = this("", position)
   def this(source: raw.HTMLCanvasElement, position: Point) = this("", position)
   def this(obj: js.Dynamic) = this("", Point(0,0))

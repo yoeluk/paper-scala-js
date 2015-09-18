@@ -15,10 +15,9 @@ enablePlugins(ScalaJSPlugin)
 resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 
 libraryDependencies ++= Seq(
-  "com.github.yoeluk" %%% "paper-scala-js" % "0.1.4-SNAPSHOT"
+  "com.github.yoeluk" %%% "paper-scala-js" % "0.5-SNAPSHOT",
+  "com.lihaoyi" %%% "scalarx" % "0.2.8"
 )
-
-jsDependencies += "org.webjars" % "paperjs" % "0.9.22" / "paper-full.min.js" commonJSName "paper"
 
 persistLauncher in Compile := false
 
@@ -43,8 +42,11 @@ The example entry method below ilustrates what it feels like drawing and adding 
 package sketcher
 
 import org.scalajs.dom.html
+import paperjs.Projects.FrameEvent
+import scala.scalajs.js
 import scala.scalajs.js.annotation.JSExport
 import paperjs._
+import rx._
 import Basic._,Paths._,Styling._,Tools._
 
 @JSExport
@@ -76,12 +78,12 @@ object Sketcher {
       width() = Paper.view.size.width
       height() = Paper.view.size.height / 2
       path.segments = js.Array[Segment]()
-      path.addPoint(Paper.view.bounds.bottomLeft)
+      path.add(Paper.view.bounds.bottomLeft)
       for (i <- 1 to points - 1) {
         val point = Point(width() / points * i, center.y)
-        path.addPoint(point)
+        path.add(point)
       }
-      path.addPoint(Paper.view.bounds.bottomRight)
+      path.add(Paper.view.bounds.bottomRight)
       path.fullySelected = true
     }
 
@@ -124,6 +126,7 @@ object Sketcher {
       initializePath()
     }
   }
+}
 ```
 
 This example is part of a provisional demo project that you can find [here](https://github.com/yoeluk/sketch-app).
