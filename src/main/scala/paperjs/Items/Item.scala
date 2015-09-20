@@ -124,6 +124,7 @@ trait Item extends EventHandling[Item] with MouseHandler {
   def sendToBack(): Unit = js.native
   def reduce(): Unit = js.native
   def replaceWith(item: Item): Boolean = js.native
+  def remove(): Unit = js.native
   def removeChildren(): js.Array[Item] =js.native
   def removeChildren(from: Int, to: Int = 0): js.Array[Item] = js.native
   def reverseChildren(): Unit = js.native

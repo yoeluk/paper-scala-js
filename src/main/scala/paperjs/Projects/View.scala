@@ -21,8 +21,8 @@ trait View extends EventHandling[View] {
   var viewSize: Size = js.native
   def bounds: Rect = js.native
   def size: Size = js.native
-  def center: Point = js.native
-  def zoom: Double = js.native
+  var center: Point = js.native
+  var zoom: Double = js.native
 
   // Event Handlers
 
@@ -31,6 +31,7 @@ trait View extends EventHandling[View] {
 
   // Methods
 
+  def draw(): Unit = js.native
   def remove(): Unit = js.native
   def isVisible: Boolean = js.native
   def scrollBy(point: Point): Unit = js.native
