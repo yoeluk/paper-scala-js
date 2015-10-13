@@ -153,6 +153,7 @@ trait Item extends EventHandling[Item] with MouseHandler {
 
   // Transform Functions
 
+  def bringToFront(): Unit = js.native
   def translate(delta: Point): Unit = js.native
   def rotate(angle: Double, center: Point = Point(0,0)): Unit = js.native
   @JSName("scale")
