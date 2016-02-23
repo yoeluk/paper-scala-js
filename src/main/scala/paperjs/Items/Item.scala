@@ -2,6 +2,7 @@ package paperjs
 package Items
 
 import org.scalajs.dom
+import org.scalajs.dom.raw.SVGElement
 
 import scala.scalajs.js
 import Basic._, Styling._,Projects._,Tools.ToolEvent
@@ -108,7 +109,12 @@ trait Item extends EventHandling[Item] with MouseHandler {
   def exportJSON(options: js.Dynamic = js.Dynamic.literal()): String =
     js.native
   def importJSON(json: String): Unit = js.native
-  def exportSVG(options: js.Dynamic = js.Dynamic.literal()): String =
+
+  @JSName("exportSVG")
+  def exportSVGAsString(options: js.Dynamic = js.Dynamic.literal(asString = true)): String =
+    js.native
+  @JSName("exportSVG")
+  def exportSVG(options: js.Dynamic = js.Dynamic.literal()): SVGElement =
     js.native
   def importSVG(svg: String, options: js.Dynamic = js.Dynamic.literal()): Item =
     js.native
