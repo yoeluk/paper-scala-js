@@ -44,7 +44,7 @@ package object paperjs {
     var fontWeight: Int = js.native
     @JSName("fontWeight")
     var fontWeightStr: String = js.native
-    var fontSize: Int = js.native
+    var fontSize: Double = js.native
     var leading: Double = js.native
     @JSName("leading")
     var leadingStr: String = js.native
